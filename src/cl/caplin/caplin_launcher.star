@@ -62,9 +62,7 @@ def launch(
     extra_labels,
     persistent,
     cl_volume_size,
-    cl_tolerations,
-    participant_tolerations,
-    global_tolerations,
+    tolerations,
     node_selectors,
     use_separate_vc,
     keymanager_enabled,
@@ -77,10 +75,6 @@ def launch(
 
     log_level = input_parser.get_client_log_level_or_default(
         participant_log_level, global_log_level, VERBOSITY_LEVELS
-    )
-
-    tolerations = input_parser.get_client_tolerations(
-        cl_tolerations, participant_tolerations, global_tolerations
     )
 
     network_name = shared_utils.get_network_name(launcher.network)
