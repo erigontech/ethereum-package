@@ -295,12 +295,12 @@ def get_beacon_config(
 
     if network not in constants.PUBLIC_NETWORKS:
         cmd.append(
-            "--beacon-config="
+            "--custom-config="
             + constants.GENESIS_CONFIG_MOUNT_PATH_ON_CONTAINER
             + "/config.yaml"
         )
         cmd.append(
-            "--genesis-ssz="
+            "--custom-genesis-state="
             + constants.GENESIS_CONFIG_MOUNT_PATH_ON_CONTAINER
             + "/genesis.ssz",
         )
