@@ -14,8 +14,7 @@ RUST_BACKTRACE_ENVVAR_NAME = "RUST_BACKTRACE"
 RUST_FULL_BACKTRACE_KEYWORD = "full"
 
 #  ---------------------------------- Beacon client -------------------------------------
-BEACON_DATA_DIRPATH_ON_BEACON_SERVICE_CONTAINER = "/home/erigon/caplin/beacon-data"
-# TODO: What's the approach on this - Permission Denided creating /data dir? BEACON_DATA_DIRPATH_ON_BEACON_SERVICE_CONTAINER = "/data/caplin/beacon-data"
+BEACON_DATA_DIRPATH_ON_BEACON_SERVICE_CONTAINER = "/home/erigon/.local/share/erigon/caplin"
 
 
 # Port nums
