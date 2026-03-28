@@ -80,17 +80,9 @@ def launch(
     network_name = shared_utils.get_network_name(launcher.network)
 
     cl_min_cpu = int(cl_min_cpu) if int(cl_min_cpu) > 0 else BEACON_MIN_CPU
-    cl_max_cpu = (
-        int(cl_max_cpu)
-        if int(cl_max_cpu) > 0
-        else constants.RAM_CPU_OVERRIDES[network_name]["caplin_max_cpu"]
-    )
+    cl_max_cpu = int(cl_max_cpu) if int(cl_max_cpu) > 0 else 0
     cl_min_mem = int(cl_min_mem) if int(cl_min_mem) > 0 else BEACON_MIN_MEMORY
-    cl_max_mem = (
-        int(cl_max_mem)
-        if int(cl_max_mem) > 0
-        else constants.RAM_CPU_OVERRIDES[network_name]["caplin_max_mem"]
-    )
+    cl_max_mem = int(cl_max_mem) if int(cl_max_mem) > 0 else 0
 
     cl_volume_size = (
         int(cl_volume_size)
