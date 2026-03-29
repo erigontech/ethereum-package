@@ -254,9 +254,8 @@ def get_beacon_config(
         "--log.console.verbosity=" + log_level,
         "--datadir=" + BEACON_DATA_DIRPATH_ON_BEACON_SERVICE_CONTAINER,
         "--discovery.addr=0.0.0.0",
-        "--discovery.port={0}".format(
-            discovery_port
-        ),
+        "--discovery.port={0}".format(discovery_port),
+        "--sentinel.tcp.port={0}".format(discovery_port),
         "--beacon.api=beacon,config,debug,events,node,validator,lighthouse",
         "--beacon.api.addr=0.0.0.0",
         "--beacon.api.port={0}".format(BEACON_HTTP_PORT_NUM),
